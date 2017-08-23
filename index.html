@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Coming Soon</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+        <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+        <style>
+            body {
+                background-color: #04c5e2;
+                color: white;
+            }
+
+            #header {
+                text-align: center;
+                margin-top: 42%;
+            }
+            #header h1 {
+                font-size: 50pt;
+            }
+            #header p {
+                font-size: 20pt;
+            }
+
+            #countdown {
+                text-align: center;
+                margin-top: 50px;
+            }
+            #countdown h1 {
+                font-size: 100pt;
+            }
+            #countdown p {
+                font-size: 16pt;
+            }
+
+            @media only screen and (max-width: 500px) {
+                #header {
+                    margin-top: 22%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div id="header">
+                        <h1>Bracketify</h1>
+                        <p>Bracketify is a tournament bracketing system that is 100% free and easy to use.
+                    </div>
+                    <div id="countdown">
+                        <h1 id="counter"></h1>
+                        <p>Days until early access.</p>
+                        <button class="btn btn-lg btn-info">Signup For Early Access</button>                        
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>                
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $("#counter").countdown('2017/9/05', function(event) {
+            $(this).html(event.strftime('%-D'));
+        });
+    </script>
+</html>
