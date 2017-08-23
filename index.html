@@ -16,7 +16,7 @@
 
             #header {
                 text-align: center;
-                margin-top: 42%;
+                margin-top: 38%;
             }
             #header h1 {
                 font-size: 50pt;
@@ -30,16 +30,34 @@
                 margin-top: 50px;
             }
             #countdown h1 {
-                font-size: 100pt;
+                font-size: 80pt;
             }
             #countdown p {
                 font-size: 16pt;
             }
+            #countdown a {
+                color: white;
+            }
+
+            .signup {
+                background-color: #00a1b9;
+                border: 2px solid #0099b0;
+                border-radius: 5px;
+                font-size: 24pt;
+            }
+
+            .signup:hover {
+                background-color: #009db4;
+            }
 
             @media only screen and (max-width: 500px) {
                 #header {
-                    margin-top: 22%;
+                    margin-top: 15%;
                 }
+                #countdown h1 {
+                    font-size: 40pt;
+                }
+
             }
         </style>
     </head>
@@ -54,10 +72,16 @@
                     </div>
                     <div id="countdown">
                         <h1 id="counter"></h1>
-                        <p>Days until early access.</p>
-                        <button class="btn btn-lg btn-info">Signup For Early Access</button>                        
+                        <p>until the doors open to Early Access users</p>
+                        <br>
+                        <a href="https://goo.gl/eS6cKr" target="_blank"><button class="signup">Signup For Early Access</button></a>      
+                        <br><br>
+                        <a href="https://twitter.com/bracketify">@bracketify</a>
+                        
                     </div>
+                
                 </div>
+           
                 <div class="col-sm-3"></div>                
             </div>
         </div>
@@ -65,7 +89,7 @@
 
     <script>
         $("#counter").countdown('2017/9/05', function(event) {
-            $(this).html(event.strftime('%-D'));
+            $(this).html(event.strftime('%-D days and %-Hhrs'));
         });
     </script>
 </html>
